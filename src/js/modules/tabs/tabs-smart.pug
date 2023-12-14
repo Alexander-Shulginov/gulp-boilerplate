@@ -1,0 +1,40 @@
+-
+	var items = {
+		tab1: [
+			{
+				tabName: "items",
+				content: 'sfdadf'
+			},
+			{
+				tabName: "items",
+				content: 'sfdadsdfsdff'
+			},
+		],
+		tab2: [
+			{
+				tabName: "items",
+				content: 'sfdadf'
+			},
+			{
+				tabName: "items",
+				content: 'sfdadsdfsdff'
+			},
+		],
+	}
+
+each value, key in items
+	.tabs(id=`custom-tabs-${key}`)
+		.tabs__nav(role='tablist', aria-labelledby=`custom-tabs-${key}`)
+			each item, index in value
+				button.tabs__btn(
+					type='button', 
+					id=`tab-${item.tabName}`,
+					role='tab',
+					aria-selected='true', 
+					aria-controls=`tabpanel-${index + 1}`)= item.tabName
+		.tabs__wrapper(aria-hidden='true')
+			each item, index in value
+				.tabs__content(
+					id=`tabpanel-${index + 1}`, 
+					role='tabpanel', 
+					aria-labelledby=`tab-${item.tabName}`)= item.content

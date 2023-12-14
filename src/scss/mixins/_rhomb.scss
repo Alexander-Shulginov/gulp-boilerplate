@@ -1,0 +1,5 @@
+@mixin rhomb($size) {
+	transform: rotate(67.5deg) skewX(45deg) scaleY(cos(45deg));
+	width: $size;
+	height: $size;
+}

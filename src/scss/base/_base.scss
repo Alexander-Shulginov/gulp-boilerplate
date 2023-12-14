@@ -1,0 +1,45 @@
+html {
+	// scroll-behavior: smooth;
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: $color-light;
+		border-radius: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $color-decor;
+		border-radius: 8px;
+	}
+}
+
+body {
+	overflow-x: hidden;
+	font-family: $main-font, sans-serif;
+	background-color: $color-bg;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+	outline-color: #000;
+	outline-offset: 2px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.body--hidden {
+	overflow: hidden;
+}
+

@@ -1,0 +1,11 @@
+- var scriptPath = "./js/";
+
+-
+    var scripts = {
+        vendor: "vendor.min.js",
+        main: "main.min.js",
+    }
+
+each script in scripts
+    if script
+        script(defer, src=`${scriptPath}${script}`)

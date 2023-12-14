@@ -1,0 +1,36 @@
+// params 
+-
+	var iconOption = {
+		name: "",
+		class: "",
+		width: "0px",
+		height: "0px" 
+	}
+
+-
+	var items = [
+		{
+			title: "",
+			content: [""],
+		},
+		{
+			title: "",
+			content: [""],
+		},
+
+	]
+.accordion 
+	.accordion__wrapper
+		each item in items
+			article.accordion__item
+				.accordion__header
+					h3.accordion__title= item.title
+					button.accordion__btn
+						+svg(`${iconOption.name}`,
+						`${iconOption.class}`, 
+						`${iconOption.width}`, 
+						`${iconOption.height}`)
+				.accordion__body
+					.accordion__content
+						each text in item.content
+							p.accordion__text= text
