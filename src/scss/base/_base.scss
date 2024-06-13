@@ -1,45 +1,54 @@
 html {
-	// scroll-behavior: smooth;
-	&::-webkit-scrollbar {
-		width: 10px;
-	}
-	&::-webkit-scrollbar-track {
-		background-color: $color-light;
-		border-radius: 8px;
-	}
-	&::-webkit-scrollbar-thumb {
-		background-color: $color-decor;
-		border-radius: 8px;
-	}
+	scroll-behavior: smooth;
 }
 
 body {
-	overflow-x: hidden;
-	font-family: $main-font, sans-serif;
-	background-color: $color-bg;
+	font-family: sans-serif;
+	background-color: gray;
 }
 
-a,
-button,
-input,
-textarea,
-select {
-	outline-color: #000;
-	outline-offset: 2px;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
+* {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .container {
-	max-width: 1140px;
+	max-width: 1340px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 30px;
+
+	@media (max-width: 744px) {
+		padding: 0 10px;
+	}
 }
 
-.body--hidden {
+.body--scroll-off {
 	overflow: hidden;
 }
 
+.body--overlay {
+	position: relative;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		background-color: rgba(0, 0, 0, 0);
+
+		transition: background-color 0.4s ease-in-out, z-index 0.4s ease-in-out;
+	}
+}
+
+.body--overlay-active {
+	&::after {
+		z-index: 499;
+		background-color: rgba(0, 0, 0, 0.5);
+		transition: background-color 0.4s ease-in-out, z-index 0.4s ease-in-out;
+	}
+}

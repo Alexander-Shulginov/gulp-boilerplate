@@ -13,15 +13,20 @@ import serverInit from './dev-tasks/serverInit';
 import createSprite from './dev-tasks/createSprite';
 import svgOptimize from './prod-tasks/svgOptimize';
 import htmlProdTasks from './prod-tasks/htmlProdTasks';
+import videoCopy from './dev-tasks/videoCopy';
+import audioCopy from './dev-tasks/audioCopy';
+import createSiteMap from './prod-tasks/createSiteMap';
 
 const watcher = () => {
 	gulp.watch(paths.font.watch, fontCopy);
 	gulp.watch(paths.icon.watch, iconCopy);
 	gulp.watch(paths.img.watch, imgOptimize);
 	gulp.watch(paths.js.watch, jsWebpack);
-	gulp.watch(paths.template.watch, pugCompile);
+	gulp.watch(paths.pug.watch, pugCompile);
 	gulp.watch(paths.scss.watch, scssCompile);
 	gulp.watch(paths.sprite.watch, createSprite);
+	gulp.watch(paths.video.watch, videoCopy);
+	gulp.watch(paths.audio.watch, videoCopy);
 };
 
 const developmentTasks = [
@@ -32,12 +37,15 @@ const developmentTasks = [
 	iconCopy,
 	imgOptimize,
 	createSprite,
+	videoCopy,
+	audioCopy,
 ];
 
 const preProductionTasks = [
 	htmlProdTasks,
 	cssProdTasks,
 	svgOptimize,
+	createSiteMap,
 ];
 
 export const build = gulp.series(
@@ -65,3 +73,6 @@ export { svgOptimize };
 export { htmlProdTasks };
 export { watcher };
 export { serverInit };
+export { videoCopy };
+export { audioCopy };
+export { createSiteMap };

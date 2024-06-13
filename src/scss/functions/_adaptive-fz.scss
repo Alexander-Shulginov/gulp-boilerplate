@@ -1,4 +1,4 @@
-@function clamp-px($min-fz, $max-fz, $min-view: 425, $max-view: 738) {
+@function clamp-px($min-fz, $max-fz, $min-view: 360, $max-view: 1440) {
 	$calculated-value: calc(($max-fz - $min-fz) / ($max-view - $min-view));
 	$ratio-vw: calc(round($calculated-value * 10000) / 100);
 	$ratio-calc: calc((($max-fz - $max-view * $calculated-value) / 16));

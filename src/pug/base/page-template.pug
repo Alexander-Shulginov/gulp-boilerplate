@@ -1,0 +1,19 @@
+- var pageLang = "ru";
+
+include ../helpers/_add-svg
+include ../helpers/_add-img
+include ../helpers/_add-img-retina
+
+doctype html
+html(lang=pageLang)
+
+	block vars
+
+	head
+		block head
+
+	body.body--overlay
+		block header
+		block main
+		block footer
+		block scripts

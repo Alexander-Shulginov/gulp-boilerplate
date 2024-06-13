@@ -1,0 +1,13 @@
+@mixin flex($arg) {
+	@if $arg == "center" {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	@else if $arg == "sb" {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

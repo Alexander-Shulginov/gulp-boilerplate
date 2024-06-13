@@ -6,9 +6,6 @@
 @import "./base/reset";
 @import "./base/font-include";
 @import "./base/base";
+@import "./components/**/*";
 
-@import "../../node_modules/swiper/swiper";
-@import "../../node_modules/swiper/modules/navigation";
-@import "../../node_modules/swiper/modules/pagination";
-@import "../template/common/**/*";
-@import "../template/layouts/**/*";
+@import "../pug/**/*";

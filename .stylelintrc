@@ -4,5 +4,9 @@
 		"stylelint-config-clean-order",
 		"stylelint-config-recommended-scss"
 	],
-	"ignoreFiles": ["./build/css/*.css", "./src/scss/lib/*.scss"]
+	"ignoreFiles": ["./build/css/*.css", "./src/scss/lib/*.scss"],
+	"rules": {
+		"no-descending-specificity": null,
+		"no-empty-source": null
+	}
 }

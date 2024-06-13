@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-expressions */
+import swiperPateric from '../../modules/swiper/swiper-pateric';
+
 export default class CustomTabs {
 	constructor(tabsElem, openDefault, direction) {
 		this.tab = tabsElem;
@@ -88,10 +90,20 @@ export default class CustomTabs {
 
 	init() {
 		this.setDefaultOpenTab();
+		const wrappers = document.querySelectorAll('.tabs__content');
 
 		this.btns.forEach((btn, index) => {
 			btn.addEventListener('click', () => {
 				this.toggleTabs(index);
+				if (wrappers && swiperPateric[index].realIndex === 0) {
+					wrappers[index].querySelector('.swiper-slide').classList.add('pateric__item--first');
+				}
+				// eslint-disable-next-line no-plusplus
+				for (let i = 0; i < 2; i++) {
+					if (swiperPateric) {
+						swiperPateric[index].update();
+					}
+				}
 			});
 
 			btn.addEventListener(('focusin'), () => {

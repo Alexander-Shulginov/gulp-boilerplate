@@ -1,1 +1,4 @@
 node_modules
+build
+check.md
+.netrc

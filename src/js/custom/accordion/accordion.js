@@ -4,16 +4,28 @@ export default class Accordion {
 		const {
 			selector,
 			openByDefault = 1,
-			mode = 'single',
+			mode = 'multiple',
 		} = options;
 
 		this.accordion = document.querySelector(selector);
-		this.btns = this.accordion.querySelectorAll('.accordion__header');
-		this.content = this.accordion.querySelectorAll('.accordion__body');
+		this.btns = document.querySelectorAll('.accordion__header');
+		this.content = document.querySelectorAll('.accordion__body');
+		this.icons = document.querySelectorAll('.accordion__icon');
+		this.cssIconActive = 'accordion__icon--active';
 		this.openByDefault = openByDefault;
 		this.mode = mode;
 
 		this.init();
+	}
+
+	updateIconTransform(index) {
+		this.icons[index].classList.add(this.cssIconActive);
+	}
+
+	resetIconsTransform() {
+		this.icons.forEach((icon) => {
+			icon.classList.remove(this.cssIconActive);
+		});
 	}
 
 	getCurrentContentHeight(index) {
@@ -21,10 +33,14 @@ export default class Accordion {
 	}
 
 	showContent(index) {
+		// this.resetIconsTransform();
+		this.updateIconTransform(index);
 		this.content[index].style.height = `${this.getCurrentContentHeight(index)}px`;
 	}
 
 	hideContent(index) {
+		// this.resetIconsTransform();
+		this.icons[index].classList.remove(this.cssIconActive);
 		this.content[index].removeAttribute('style');
 	}
 
@@ -33,7 +49,7 @@ export default class Accordion {
 	}
 
 	checkContentIsVisible(index) {
-		return this.content[index].hasAttribute('style');
+		return this.content[index].getAttribute('style');
 	}
 
 	toggleContent(index) {

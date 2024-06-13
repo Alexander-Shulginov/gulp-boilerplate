@@ -18,12 +18,12 @@ const config = {
 };
 
 export default async function htmlProdTasks(cb) {
-	gulp.src(`${paths.template.dest}/index.html`)
+	gulp.src(`${paths.pug.dest}/index.html`)
 		.pipe(htmlMin(config.htmlMin))
-		.pipe(gulp.dest(paths.template.dest))
+		.pipe(gulp.dest(paths.pug.dest))
 		.on('end', () => {
 			exec('npm run validate', (error, stdout) => {
-				console.log(stdout); // eslint-disable-line no-console
+				console.log(stdout);
 				cb();
 			});
 		});

@@ -3,10 +3,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
 	entry: './src/js/main.js',
+
 	output: {
 		path: path.resolve(__dirname, 'build/js'),
 		filename: '[name].min.js',
 	},
+
 	module: {
 		rules: [
 			{
@@ -22,22 +24,24 @@ module.exports = {
 			},
 		],
 	},
+
 	optimization: {
 		minimizer: [
 			new TerserPlugin({
-				parallel: true, 			// parallel minify (for optimization)
-				extractComments: false, 	// disable comment
+				parallel: true, // parallel minify (for optimization)
+				extractComments: false, // disable comment
 				terserOptions: {
-					mangle: true, 			// minify var names
+					mangle: true, // minify var names
 					compress: {
 						drop_console: true, // delete console.log
 					},
 					format: {
-						comments: false, 	// disable comment
+						comments: false, // disable comment
 					},
 				},
 			}),
 		],
+
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
@@ -49,6 +53,7 @@ module.exports = {
 			},
 		},
 	},
+
 	devtool: process.env.NODE_ENV === 'production' ? false : 'source-map',
 	mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };

@@ -1,19 +1,55 @@
 @mixin position($position) {
 	position: absolute;
 
-	@if $position == "vertical" {
-		top: 50%;
-		transform: translateY(-50%);
-	} 
-	
-	@else if $position == "horizontal" {
-		left: 50%;
-		transform: translate(-50%);
-	}
-	
-	@else if $position == "center" {
+	@if $position == "center" {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+
+	@else if $position == "top" {
+		top: 0%;
+		left: 50%;
+		transform: translateX(-50%);
+	} 
+
+	@else if $position == "bottom" {
+		bottom: 0%;
+		left: 50%;
+		transform: translateX(-50%);
+	} 
+	
+	
+	@else if $position == "left" {
+		top: 50%;
+		left: 0%;
+		transform: translateY(-50%);
+	}
+
+	@else if $position == "right" {
+		top: 50%;
+		right: 0%;
+		transform: translateY(-50%);
+	}
+
+	@else if $position == "top left" {
+		top: 0%;
+		left: 0%;
+	}
+
+	@else if $position == "top right" {
+		top: 0%;
+		right: 0%;
+	}
+
+	@else if $position == "bottom left" {
+		bottom: 0%;
+		left: 0%;
+	}
+
+	@else if $position == "bottom right" {
+		right: 0%;
+		bottom: 0%;
+	}
+	
 }

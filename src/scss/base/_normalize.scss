@@ -10,7 +10,7 @@ hr {
 }
 
 pre {
-	font-family: monospace, monospace; //* Correct the inheritance and scaling of font size in all browsers
+	font-family: monospace, sans-serif; //* Correct the inheritance and scaling of font size in all browsers
 	font-size: 1em; //* Correct the odd `em` font sizing in all browsers
 }
 
@@ -32,7 +32,7 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace; //* Correct the inheritance and scaling of font size in all browsers
+	font-family: monospace, sans-serif; //* Correct the inheritance and scaling of font size in all browsers
 	font-size: 1em; //* Correct the odd `em` font sizing in all browsers
 }
 
@@ -70,19 +70,19 @@ select {
 	text-transform: none; //* Remove the inheritance of text transform in Firefox
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	appearance: button; //* Correct the inability to style clickable types in iOS and Safari
-}
+// button,
+// [type="button"],
+// [type="reset"],
+// [type="submit"] {
+// 	appearance: button; //* Correct the inability to style clickable types in iOS and Safari
+// }
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText; //* Restore the focus styles unset by the previous rule
-}
+// button:-moz-focusring,
+// [type="button"]:-moz-focusring,
+// [type="reset"]:-moz-focusring,
+// [type="submit"]:-moz-focusring {
+// 	outline: 1px dotted ButtonText; //* Restore the focus styles unset by the previous rule
+// }
 
 fieldset {
 	padding: 0.35em 0.75em 0.625em; //* Correct the padding in Firefox
@@ -119,31 +119,31 @@ textarea {
 	overflow: auto; //* Remove the default vertical scrollbar in IE 10+
 }
 
-[type="checkbox"],
-[type="radio"] {
-	box-sizing: border-box; //* Add the correct box sizing in IE 10
-	padding: 0; //* Remove the padding in IE 10
-}
+// [type="checkbox"],
+// [type="radio"] {
+// 	box-sizing: border-box; //* Add the correct box sizing in IE 10
+// 	padding: 0; //* Remove the padding in IE 10
+// }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto; //* Correct the cursor style of increment and decrement buttons in Chrome
-}
+// [type="number"]::-webkit-inner-spin-button,
+// [type="number"]::-webkit-outer-spin-button {
+// 	height: auto; //* Correct the cursor style of increment and decrement buttons in Chrome
+// }
 
-[type="search"] {
-	appearance: textfield; //* Correct the odd appearance in Chrome and Safari
-	outline-offset: -2px; //*  Correct the outline style in Safari
-}
+// [type="search"] {
+// 	appearance: textfield; //* Correct the odd appearance in Chrome and Safari
+// 	outline-offset: -2px; //*  Correct the outline style in Safari
+// }
 
-[type="search"]::-webkit-search-decoration {
-	appearance: none; //* Remove the inner padding in Chrome and Safari on macOS
-}
+// [type="search"]::-webkit-search-decoration {
+// 	appearance: none; //* Remove the inner padding in Chrome and Safari on macOS
+// }
 
-::-webkit-file-upload-button {
-	font: inherit; //* Change font properties to `inherit` in Safari
-	appearance: button; //* Correct the inability to style clickable types in iOS and Safari
-}
+// ::-webkit-file-upload-button {
+// 	font: inherit; //* Change font properties to `inherit` in Safari
+// 	appearance: button; //* Correct the inability to style clickable types in iOS and Safari
+// }
 
-[hidden] {
-	display: none; //* Add the correct display in IE 10
-}
+// [hidden] {
+// 	display: none; //* Add the correct display in IE 10
+// }

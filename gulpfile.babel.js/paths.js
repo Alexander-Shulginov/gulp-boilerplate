@@ -4,10 +4,9 @@ const pathBuild = './build';
 const paths = {
 	root: pathBuild,
 
-	template: {
-		src: `${pathSrc}/template/*.{pug,html}`,
-		src_pages: `${pathSrc}/template/pages/*.{pug,html}`,
-		watch: `${pathSrc}/template/**/*.{pug,html}`,
+	pug: {
+		src: `${pathSrc}/pug/pages/*/*.{pug,html}`,
+		watch: `${pathSrc}/pug/**/*.{pug,html}`,
 		dest: pathBuild,
 	},
 
@@ -39,6 +38,18 @@ const paths = {
 		src: `${pathSrc}/icons/**/*`,
 		watch: `${pathSrc}/icons/**/*`,
 		dest: `${pathBuild}/icons/`,
+	},
+
+	video: {
+		src: `${pathSrc}/video/**/*`,
+		watch: `${pathSrc}/video/**/*`,
+		dest: `${pathBuild}/video/`,
+	},
+
+	audio: {
+		src: `${pathSrc}/audio/**/*`,
+		watch: `${pathSrc}/audio/**/*`,
+		dest: `${pathBuild}/audio/`,
 	},
 
 	font: {

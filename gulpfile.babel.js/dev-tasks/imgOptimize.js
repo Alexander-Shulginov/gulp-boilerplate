@@ -30,6 +30,7 @@ export default async function imgOptimize() {
 		// .pipe(cached('responsiveImg'))
 		// .pipe(responsiveImg(configImg.responsiveOptions))
 		.pipe(webp())
+		// .pipe(cached(webp()))
 		// .pipe(gulp.dest(pathForRetinaImg))
 		// .pipe(bs.stream())
 		// .pipe(gulp.src(`${pathForRetinaImg}**/*`))
