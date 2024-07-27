@@ -13,6 +13,6 @@
 - Babel транспиляция кода
 - Линтинг pug, scss, js кода
 - Js/Scss source maps
-- Webpack + Chunks
+- Webpack
 - CLI W3C валидатор
 - Автогенерация sitemap
